@@ -1,0 +1,35 @@
+
+.market-item-header {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    font-weight: bold;
+}
+
+.market-item-header__country,
+.market-item-header__id,
+.market-item-header__name,
+.market-item-header__hours,
+.market-item-header__status {
+    padding: 20px;
+}
+
+.market-item-header__country {
+    width: 100px;
+}
+
+.market-item-header__id {
+    width: 150px;
+}
+
+.market-item-header__name {
+    width: 150px;
+}
+
+.market-item-header__hours {
+    width: 400px;
+}
+
+.market-item-header__status {
+    width: 150px;
+}

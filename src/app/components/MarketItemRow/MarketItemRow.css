@@ -1,0 +1,41 @@
+
+.market-item-row {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.market-item-row__country,
+.market-item-row__id,
+.market-item-row__name,
+.market-item-row__hours,
+.market-item-row__status {
+    padding: 20px;
+}
+
+.market-item-row__country {
+    width: 100px;
+}
+
+.market-item-row__id {
+    width: 150px;
+}
+
+.market-item-row__name {
+    width: 150px;
+}
+
+.market-item-row__hours {
+    width: 400px;
+}
+
+.market-item-row__status {
+    width: 150px;
+}
+
+.market-item-row__status--opened {
+    color: #18bc9c;
+}
+
+.market-item-row__status--closed {
+    color: #f39c12;
+}
