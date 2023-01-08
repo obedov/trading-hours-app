@@ -8,28 +8,33 @@
 .market-item-row__id,
 .market-item-row__name,
 .market-item-row__hours,
+.market-item-row__current-time,
 .market-item-row__status {
     padding: 20px;
 }
 
 .market-item-row__country {
-    width: 100px;
+    width: 80px;
 }
 
 .market-item-row__id {
-    width: 150px;
+    width: 100px;
 }
 
 .market-item-row__name {
-    width: 150px;
+    width: 110px;
 }
 
 .market-item-row__hours {
-    width: 400px;
+    width: 350px;
+}
+
+.market-item-row__current-time {
+    width: 180px;
 }
 
 .market-item-row__status {
-    width: 150px;
+    width: 100px;
 }
 
 .market-item-row__status--opened {

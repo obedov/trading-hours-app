@@ -10,26 +10,31 @@
 .market-item-header__id,
 .market-item-header__name,
 .market-item-header__hours,
+.market-item-header__current-time,
 .market-item-header__status {
     padding: 20px;
 }
 
 .market-item-header__country {
-    width: 100px;
+    width: 80px;
 }
 
 .market-item-header__id {
-    width: 150px;
+    width: 100px;
 }
 
 .market-item-header__name {
-    width: 150px;
+    width: 110px;
 }
 
 .market-item-header__hours {
-    width: 400px;
+    width: 350px;
+}
+
+.market-item-header__current-time {
+    width: 180px;
 }
 
 .market-item-header__status {
-    width: 150px;
+    width: 100px;
 }

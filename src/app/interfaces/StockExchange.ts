@@ -3,4 +3,5 @@ export interface StockExchange {
 	country: string;
 	name: string;
 	hours: string;
+	timeZone: string;
 }

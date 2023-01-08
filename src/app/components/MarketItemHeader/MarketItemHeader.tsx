@@ -9,6 +9,7 @@ export const MarketItemHeader: React.FC = () => {
 			<div className={'market-item-header__id'}>ID</div>
 			<div className={'market-item-header__name'}>Name</div>
 			<div className={'market-item-header__hours'}>Hours</div>
+			<div className={'market-item-header__current-time'}>Current time</div>
 			<div className={'market-item-header__status'}>Status</div>
 		</div>
 	);
