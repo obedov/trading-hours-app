@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import cn from 'classnames';
 
 import { StockExchange } from '../../interfaces/StockExchange';
 import { MarketStatus } from '../../enums/MarketStatus';
+import { getMarketStatus } from '../../functions/getMarketStatus/getMarketStatus';
 
 import './MarketItemRow.css';
 
@@ -14,7 +16,6 @@ export const MarketItemRow: React.FC<MarketItemRowProps> = ({ item }) => {
 	const [time, setTime] = useState(new Date());
 
 	const { id, name, hours, country, timeZone } = item;
-	const marketStatus = MarketStatus.CLOSED;
 
 	useEffect(() => {
 		setInterval(() => {
@@ -23,6 +24,8 @@ export const MarketItemRow: React.FC<MarketItemRowProps> = ({ item }) => {
 	});
 
 	const currentTime = time.toLocaleString('ru-RU', { timeZone });
+	const dayOfTime = time.toLocaleString('en-US', { weekday: 'short', timeZone });
+	const marketStatus = getMarketStatus(hours, time, timeZone);
 
 	return (
 		<div className={'market-item-row'}>
@@ -30,8 +33,17 @@ export const MarketItemRow: React.FC<MarketItemRowProps> = ({ item }) => {
 			<div className={'market-item-row__id'}>{id}</div>
 			<div className={'market-item-row__name'}>{name}</div>
 			<div className={'market-item-row__hours'}>{hours}</div>
-			<div className={'market-item-row__current-time'}>{currentTime}</div>
-			<div className={'market-item-row__status market-item-row__status--closed'}>{marketStatus}</div>
+			<div className={'market-item-row__current-time'}>{`${currentTime} (${dayOfTime})`}</div>
+			<div
+				className={cn(
+					'market-item-row__status',
+					marketStatus === MarketStatus.OPENED
+						? 'market-item-row__status--opened'
+						: 'market-item-row__status--closed'
+				)}
+			>
+				{marketStatus}
+			</div>
 		</div>
 	);
 };
